@@ -60,8 +60,8 @@ all: main-build
 main-build: Week12Spi.elf secondary-outputs
 
 # Tool invocations
-Week12Spi.elf Week12Spi.map: $(OBJS) $(USER_OBJS) D:\STM32_2_2564\Fra222\ micro\ con\10SPI\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Week12Spi.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32_2_2564\Fra222 micro con\10SPI\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week12Spi.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Week12Spi.elf Week12Spi.map: $(OBJS) $(USER_OBJS) D:\STM32_2_2564\Fra222\ micro\ con\git\10SPI\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Week12Spi.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32_2_2564\Fra222 micro con\git\10SPI\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week12Spi.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

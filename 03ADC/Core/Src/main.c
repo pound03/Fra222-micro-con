@@ -112,6 +112,8 @@ int main(void) {
 
 		}
 		B1state[1] = B1state[0];
+
+
 		ADCPollingmethodUpdate();
 
 		if (ADCmode == 0) {

@@ -111,13 +111,14 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_Delay(100);
-//  IOExpenderInit();
+  IOExpenderInit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+#define test_addr 0b10100000
   static uint8_t dataq[4] = { 0xff, 0x00, 0x55, 0xaa };
-  HAL_I2C_Mem_Write_IT(&hi2c1, test_addr, 0x01, I2C_MEMADD_SIZE_16BIT,dataq, 4);
+//  HAL_I2C_Mem_Write_IT(&hi2c1, test_addr, 0x01, I2C_MEMADD_SIZE_16BIT,dataq, 4);
 	while (1) {
 		EEPROMWriteExample();
 		EEPROMReadExample(eepromDataReadBack, 4);
